@@ -1,0 +1,195 @@
+/* 🌿 WasteWise – Smart Waste Management Tracker UI */
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Base Body */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* Header */
+header {
+  background-color: #117A3A;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px;
+}
+
+header .logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+  font-size: 1.3rem;
+}
+
+header .logo img {
+  width: 28px;
+  height: 28px;
+}
+
+header nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+header nav a:hover {
+  text-decoration: underline;
+}
+
+/* Hero Section */
+.hero {
+  background-color: #1E874C;
+  color: #fff;
+  text-align: center;
+  padding: 90px 20px;
+}
+
+.hero h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+.hero button {
+  margin-top: 25px;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 8px;
+  background-color: #fff;
+  color: #117A3A;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.hero button:hover {
+  background-color: #f0f0f0;
+}
+
+/* Cards Section */
+.cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+  margin: 60px 20px;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  width: 270px;
+  padding: 30px 20px;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 15px;
+}
+
+.card h3 {
+  color: #117A3A;
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+
+.card p {
+  color: #555;
+  font-size: 0.95rem;
+}
+
+/* Footer */
+footer {
+  background-color: #117A3A;
+  color: white;
+  text-align: center;
+  padding: 18px;
+  font-size: 0.9rem;
+}
+
+/* 📸 Report Waste Page */
+.report-section {
+  max-width: 600px;
+  margin: 50px auto;
+  background-color: white;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.report-section h1 {
+  color: #117A3A;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.report-section p {
+  text-align: center;
+  color: #555;
+  margin-bottom: 25px;
+}
+
+.report-form label {
+  display: block;
+  font-weight: 600;
+  margin-top: 15px;
+}
+
+.report-form input,
+.report-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-top: 8px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.report-form button {
+  display: block;
+  margin: 25px auto 0;
+  background-color: #117A3A;
+  color: white;
+  font-weight: 600;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.report-form button:hover {
+  background-color: #0f6a33;
+}
+
+#preview img {
+  display: block;
+  margin: 15px auto;
+}
+

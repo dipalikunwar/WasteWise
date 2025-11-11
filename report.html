@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Report Waste Issue – WasteWise</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">
+      <img src="logo.png" alt="WasteWise logo" />
+      <span>WasteWise</span>
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="report.html" class="active">Report Waste</a>
+      <a href="schedules.html">Schedules</a>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="login.html">Login</a>
+    </nav>
+  </header>
+
+  <!-- Report Form Section -->
+  <section class="report-section">
+    <h1>Report a Waste Issue</h1>
+    <p>Help your community by reporting waste problems around you.</p>
+
+    <form class="report-form">
+      <label for="name">Your Name</label>
+      <input type="text" id="name" placeholder="Enter your name" required>
+
+      <label for="address">Address / Location</label>
+      <input type="text" id="address" placeholder="Enter exact location" required>
+
+      <label for="description">Issue Description</label>
+      <textarea id="description" rows="4" placeholder="Describe the issue" required></textarea>
+
+      <label for="photo">Upload Photo</label>
+      <input type="file" id="photo" accept="image/*" onchange="previewImage(event)" />
+
+      <div id="preview"></div>
+
+      <button type="submit">Submit Report</button>
+    </form>
+  </section>
+
+  <footer>
+    © 2023 WasteWise | Built by Dipali Kunwar 💚
+  </footer>
+
+  <script>
+    // 🖼️ Preview uploaded photo
+    function previewImage(event) {
+      const preview = document.getElementById('preview');
+      preview.innerHTML = '';
+      const file = event.target.files[0];
+      if (file) {
+        const img = document.createElement('img');
+        img.src = URL.createObjectURL(file);
+        img.width = 200;
+        img.style.marginTop = '10px';
+        img.style.borderRadius = '10px';
+        preview.appendChild(img);
+      }
+    }
+  </script>
+
+</body>
+</html>
