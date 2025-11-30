@@ -15,9 +15,9 @@
             <span>WasteWise</span>
         </div>
         <nav>
-            <a href="index.html">Home</a>
-            <a href="report.html">Report Waste</a>
-            <a href="schedule.html">Schedules</a>
+            <a href="/">Home</a>
+            <a href="/report">Report Waste</a>
+            <a href="/schedule">Schedules</a>
             <a href="#" onclick="logout()">Logout</a>
         </nav>
     </header>
@@ -63,7 +63,8 @@
     <!-- 🚫 Dashboard Protection -->
     <script>
         if (localStorage.getItem("wastewiseLoggedIn") !== "true") {
-            window.location.href = "login.html";
+           window.location.href = "/login";
+
         }
     </script>
 

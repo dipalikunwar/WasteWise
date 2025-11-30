@@ -14,7 +14,9 @@ document.querySelector(".auth-form").addEventListener("submit", function(e) {
     if (email === savedUser.email && password === savedUser.password) {
         alert("Login Successful!");
         localStorage.setItem("wastewiseLoggedIn", "true");
-        window.location.href = "dashboard.html";
+        window.location.href = "/login";
+
+
     } else {
         alert("Invalid email or password!");
     }

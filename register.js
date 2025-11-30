@@ -19,5 +19,6 @@ document.querySelector(".auth-form").addEventListener("submit", function(e) {
 
     localStorage.setItem("wastewiseUser", JSON.stringify(user));
     alert("Registration Successful!");
-    window.location.href = "login.html";
+    window.location.href = "/login";
+
 });

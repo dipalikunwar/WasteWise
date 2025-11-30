@@ -29,5 +29,6 @@ document.querySelector(".report-form").addEventListener("submit", function(e) {
 
     alert("Report submitted successfully!");
 
-    window.location.href = "myreports.html"; // redirect to view page
+    window.location.href = "/myreports";
+// redirect to view page
 });
