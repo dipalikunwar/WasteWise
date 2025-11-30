@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Waste Collection Schedule | WasteWise</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <img src="logo.png" alt="">
+        <span>WasteWise</span>
+    </div>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="report.html">Report Waste</a>
+        <a href="schedule.html" class="active">Schedules</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="#" onclick="logout()">Logout</a>
+    </nav>
+</header>
+
+<section class="schedule-modern">
+    <h1>Waste Collection Schedule</h1>
+    <p>Find your area's waste pickup timings below.</p>
+
+    <!-- SEARCH BAR -->
+    <div class="search-box">
+        <input 
+            type="text" 
+            id="searchArea" 
+            placeholder="Search by area (Sector 1, Sector 2, Downtown, Uptown)"
+            onkeyup="filterCards()"
+        >
+        <button onclick="filterCards()">Search</button>
+    </div>
+
+    <!-- SEARCH RESULTS for mockSchedules -->
+    <div id="schedule-results" class="results-box"></div>
+
+    <h2 class="sub-heading">Available Areas</h2>
+
+    <!-- CARD GRID -->
+    <div class="schedule-grid">
+
+        <!-- CARD 1 -->
+        <div class="schedule-card" data-area="sector 1 downtown">
+            <img src="icons/house.png" alt="">
+            <h3>Sector 1</h3>
+            <p><strong>Day:</strong> Monday</p>
+            <p><strong>Time:</strong> 7:00 AM – 9:00 AM</p>
+            <span class="tag blue">Household Waste</span>
+        </div>
+
+        <!-- CARD 2 -->
+        <div class="schedule-card" data-area="sector 2 uptown">
+            <img src="icons/recycle.png" alt="">
+            <h3>Sector 2</h3>
+            <p><strong>Day:</strong> Wednesday</p>
+            <p><strong>Time:</strong> 8:00 AM – 10:00 AM</p>
+            <span class="tag green">Recyclables</span>
+        </div>
+
+        <!-- CARD 3 -->
+        <div class="schedule-card" data-area="sector 3">
+            <img src="icons/leaf.png" alt="">
+            <h3>Sector 3</h3>
+            <p><strong>Day:</strong> Friday</p>
+            <p><strong>Time:</strong> 7:30 AM – 9:30 AM</p>
+            <span class="tag orange">Organic Waste</span>
+        </div>
+
+    </div>
+</section>
+
+
+<footer>
+    © 2025 WasteWise | Built by Dipali Kunwar 💚
+</footer>
+
+<script src="schedule.js"></script>
+</body>
+</html>

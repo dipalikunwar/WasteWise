@@ -3,49 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WasteWise - Dashboard</title>
+    <title>WasteWise Dashboard</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-    <header class="dashboard-header">
-        <h1>WasteWise Dashboard</h1>
+    
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="">
+            <span>WasteWise</span>
+        </div>
         <nav>
             <a href="index.html">Home</a>
-            <a href="#">Profile</a>
-            <a href="#">Logout</a>
+            <a href="report.html">Report Waste</a>
+            <a href="schedule.html">Schedules</a>
+            <a href="#" onclick="logout()">Logout</a>
         </nav>
     </header>
 
+    <!-- Dashboard Section -->
     <section class="dashboard-container">
-        <div class="dashboard-card">
-            <img src="https://cdn-icons-png.flaticon.com/512/1040/1040230.png" alt="Report Icon">
-            <h3>Report Waste Issue</h3>
-            <p>Report uncollected garbage or overflowing bins with photo and location.</p>
-            <a href="#" class="btn">Report Now</a>
+        <h1>Dashboard</h1>
+
+        <!-- ⭐ Welcome User Message ⭐ -->
+        <h2 id="welcomeUser"></h2>
+
+        <p>Welcome to WasteWise! Manage and monitor waste reports in your locality.</p>
+
+        <div class="stats-grid">
+
+            <div class="stat-card">
+                <img src="icons/total.png" alt="">
+                <h3>Total Reports</h3>
+                <p class="value" id="totalReports">0</p>
+            </div>
+
+            <div class="stat-card">
+                <img src="icons/resolved.png" alt="">
+                <h3>Resolved Reports</h3>
+               <p class="value green" id="resolvedReports">0</p>
+            </div>
+
+            <div class="stat-card">
+                <img src="icons/pending.png" alt="">
+                <h3>Pending Reports</h3>
+               <p class="value red" id="pendingReports">0</p>
+            </div>
+
         </div>
 
-        <div class="dashboard-card">
-            <img src="https://cdn-icons-png.flaticon.com/512/860/860825.png" alt="Schedule Icon">
-            <h3>View Collection Schedule</h3>
-            <p>Check the garbage collection schedule for your area.</p>
-            <a href="#" class="btn">View Schedule</a>
-        </div>
-
-        <div class="dashboard-card">
-            <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Stats Icon">
-            <h3>Cleanliness Stats</h3>
-            <p>See how your community scores on cleanliness and recycling efforts.</p>
-            <a href="#" class="btn">View Stats</a>
-        </div>
-
-        <div class="dashboard-card">
-            <img src="https://cdn-icons-png.flaticon.com/512/2965/2965358.png" alt="History Icon">
-            <h3>My Reports</h3>
-            <p>View all waste issues you’ve reported and track their status.</p>
-            <a href="#" class="btn">View Reports</a>
-        </div>
+        <a href="myreports.html" class="view-btn">View Reports</a>
     </section>
+
+    <footer>
+        © 2025 WasteWise | Built by Dipali Kunwar 💚
+    </footer>
+
+    <!-- 🚫 Dashboard Protection -->
+    <script>
+        if (localStorage.getItem("wastewiseLoggedIn") !== "true") {
+            window.location.href = "login.html";
+        }
+    </script>
+
+    <!-- 🔐 SHOW USER NAME ON DASHBOARD -->
+    <script>
+        const user = JSON.parse(localStorage.getItem("wastewiseUser"));
+
+        if (user) {
+            document.getElementById("welcomeUser").innerText = "Welcome, " + user.name + "!";
+        } else {
+            document.getElementById("welcomeUser").innerText = "Welcome!";
+        }
+    </script>
+    <script>
+    let reports = JSON.parse(localStorage.getItem("wasteReports")) || [];
+
+    document.getElementById("totalReports").innerText = reports.length;
+
+    let pending = reports.filter(r => r.status === "Pending").length;
+    let resolved = reports.filter(r => r.status === "Resolved").length;
+
+    document.getElementById("pendingReports").innerText = pending;
+    document.getElementById("resolvedReports").innerText = resolved;
+</script>
+
+
+    <script src="logout.js"></script>
 
 </body>
 </html>

@@ -193,3 +193,443 @@ footer {
   margin: 15px auto;
 }
 
+
+
+#schedule {
+  padding: 40px 20px;
+  background-color: #f7f7f7;
+}
+
+#schedule h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #2c3e50;
+}
+
+.location-input {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.location-input input {
+  padding: 10px;
+  width: 200px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.location-input button {
+  padding: 10px 15px;
+  margin-left: 10px;
+  border: none;
+  background-color: #27ae60;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#schedule-results {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+/* 🌿 Dashboard Section */
+.dashboard-container {
+    text-align: center;
+    background-color: #1e874c;
+    padding: 60px 20px;
+    color: white;
+}
+
+.dashboard-container h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.dashboard-container p {
+    font-size: 1.1rem;
+    margin-top: 10px;
+    margin-bottom: 40px;
+    opacity: 0.9;
+}
+
+.stats-grid {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.stat-card {
+    background-color: white;
+    width: 260px;
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+    color: #222;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+}
+
+.stat-card img {
+    width: 30px;
+    margin-bottom: 15px;
+}
+
+.stat-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.value {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-top: 5px;
+}
+
+.green {
+    color: #2e7d32;
+}
+
+.red {
+    color: #d32f2f;
+}
+
+/* View Button */
+.view-btn {
+    display: inline-block;
+    margin-top: 40px;
+    background: white;
+    color: #1e874c;
+    padding: 12px 30px;
+    border-radius: 8px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.view-btn:hover {
+    background: #f1f1f1;
+}
+/* 🌿 Modern Schedule Page UI */
+.schedule-modern {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #f4f7f4;
+}
+
+.schedule-modern h1 {
+    font-size: 2.5rem;
+    color: #117A3A;
+    margin-bottom: 10px;
+}
+
+.schedule-modern p {
+    color: #555;
+    margin-bottom: 30px;
+    font-size: 1rem;
+}
+
+/* 🔍 Search Box */
+.search-box {
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.search-box input {
+    padding: 12px 15px;
+    width: 320px;
+    border-radius: 8px;
+    border: 1px solid #bbb;
+    outline: none;
+}
+
+.search-box button {
+    padding: 12px 22px;
+    border: none;
+    background: #117A3A;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.search-box button:hover {
+    background: #0f6a33;
+}
+
+/* 🟦 Search Results Box (mockSchedules) */
+.results-box {
+    margin-top: 20px;
+    background: #ffffff;
+    padding: 20px;
+    min-height: 50px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    color: #333;
+    font-size: 1rem;
+}
+
+.results-box ul {
+    padding-left: 20px;
+}
+
+/* Sub-heading above cards */
+.sub-heading {
+    margin-top: 50px;
+    color: #117A3A;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+/* 🟩 CARD GRID */
+.schedule-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* 📦 CARD UI */
+.schedule-card {
+    background: white;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 5px 14px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    text-align: center;
+}
+
+.schedule-card:hover {
+    transform: translateY(-6px);
+}
+
+.schedule-card img {
+    width: 50px;
+    margin-bottom: 12px;
+}
+
+.schedule-card h3 {
+    margin-bottom: 10px;
+    color: #117A3A;
+    font-size: 1.3rem;
+}
+
+.schedule-card p {
+    font-size: 0.95rem;
+    color: #555;
+}
+
+/* 🏷 Category Tags */
+.tag {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: white;
+}
+
+.tag.blue { background: #1976d2; }
+.tag.green { background: #2e7d32; }
+.tag.orange { background: #e65100; }
+
+/* 🌿 AUTH PAGE (Login + Register) */
+.auth-container {
+    max-width: 420px;
+    background: white;
+    padding: 35px;
+    margin: 70px auto;
+    border-radius: 15px;
+    box-shadow: 0 5px 18px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.auth-container h2 {
+    margin-bottom: 25px;
+    color: #117A3A;
+    font-size: 1.8rem;
+}
+
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.auth-form label {
+    text-align: left;
+    font-weight: 600;
+    color: #333;
+}
+
+.auth-form input {
+    padding: 12px 14px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+}
+
+.auth-form input:focus {
+    border-color: #117A3A;
+}
+
+.auth-btn {
+    background: #117A3A;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    margin-top: 10px;
+}
+
+.auth-btn:hover {
+    background: #0f6a33;
+}
+
+.auth-text {
+    margin-top: 10px;
+    font-size: 0.95rem;
+}
+
+.auth-text a {
+    color: #117A3A;
+    font-weight: bold;
+}
+/* Register extra spacing */
+.auth-form input {
+    padding: 12px 14px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+
+.auth-form input:focus {
+    border-color: #117A3A;
+}
+
+.auth-container {
+    max-width: 450px;
+    padding: 40px;
+}
+/* 🌿 My Reports Page */
+.myreports-section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.myreports-section h1 {
+    font-size: 2.2rem;
+    color: #117A3A;
+    margin-bottom: 10px;
+}
+
+.myreports-section p {
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.reports-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+/* 📌 Report Card */
+.report-card {
+    background: white;
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    text-align: left;
+    display: flex;
+    gap: 15px;
+    position: relative;
+    align-items: flex-start;
+}
+
+.report-card h3 {
+    color: #117A3A;
+    margin-bottom: 8px;
+    font-size: 1.2rem;
+}
+
+.report-card p {
+    margin: 3px 0;
+    font-size: 0.95rem;
+    color: #444;
+}
+
+.report-card .desc {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* 🟠 Status Badge */
+.status {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: white;
+}
+
+.pending-status {
+    background: #e65100;
+}
+
+.resolved-status {
+    background: #2e7d32;
+}
+
+/* 🟢 Report Icon */
+.report-icon img {
+    width: 48px;
+    margin-top: 5px;
+}
+
+/* No Report Message */
+.no-report {
+    font-size: 1.1rem;
+    color: #777;
+}
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: #117A3A;
+    color: white;
+    padding: 12px 0;
+    text-align: center;
+    left: 0;
+    z-index: 999;
+}
+body {
+    padding-bottom: 70px; /* space for fixed footer */
+}

@@ -17,9 +17,9 @@
     <nav>
       <a href="index.html">Home</a>
       <a href="report.html" class="active">Report Waste</a>
-      <a href="schedules.html">Schedules</a>
+      <a href="schedule.html">Schedules</a>
       <a href="dashboard.html">Dashboard</a>
-      <a href="login.html">Login</a>
+      <a href="#" onclick="logout()">Logout</a>
     </nav>
   </header>
 
@@ -29,22 +29,22 @@
     <p>Help your community by reporting waste problems around you.</p>
 
     <form class="report-form">
-      <label for="name">Your Name</label>
-      <input type="text" id="name" placeholder="Enter your name" required>
+    <label>Category</label>
+    <select id="reportCategory">
+        <option>Garbage Overflow</option>
+        <option>Missed Pickup</option>
+        <option>Illegal Dumping</option>
+    </select>
 
-      <label for="address">Address / Location</label>
-      <input type="text" id="address" placeholder="Enter exact location" required>
+    <label>Location</label>
+    <input type="text" id="reportLocation" placeholder="Enter location">
 
-      <label for="description">Issue Description</label>
-      <textarea id="description" rows="4" placeholder="Describe the issue" required></textarea>
+    <label>Description</label>
+    <textarea id="reportDescription" placeholder="Describe the issue..."></textarea>
 
-      <label for="photo">Upload Photo</label>
-      <input type="file" id="photo" accept="image/*" onchange="previewImage(event)" />
+    <button type="submit" class="submit-btn">Submit Report</button>
+</form>
 
-      <div id="preview"></div>
-
-      <button type="submit">Submit Report</button>
-    </form>
   </section>
 
   <footer>
@@ -67,6 +67,8 @@
       }
     }
   </script>
+  <script src="report.js"></script>
+
 
 </body>
 </html>

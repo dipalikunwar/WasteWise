@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Reports | WasteWise</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <img src="logo.png" alt="">
+        <span>WasteWise</span>
+    </div>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="report.html">Report Waste</a>
+        <a href="schedule.html">Schedules</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="#" onclick="logout()">Logout</a>
+    </nav>
+</header>
+
+<section class="myreports-section">
+    <h1>My Reports</h1>
+    <p>Your submitted waste reports are listed below.</p>
+
+    <div id="reportsList" class="reports-grid"></div>
+</section>
+
+<footer>
+    © 2025 WasteWise | Built by Dipali Kunwar 💚
+</footer>
+
+<script src="logout.js"></script>
+
+<script>
+    let reports = JSON.parse(localStorage.getItem("wasteReports")) || [];
+    let list = document.getElementById("reportsList");
+
+    if (reports.length === 0) {
+        list.innerHTML = "<p class='no-report'>No reports submitted yet.</p>";
+    }
+
+    reports.forEach((r, i) => {
+        list.innerHTML += `
+            <div class="report-card">
+                <div class="report-icon">
+                    <img src="icons/report.png" alt="">
+                </div>
+
+                <div class="report-details">
+                    <h3>${r.category}</h3>
+                    <p><strong>Location:</strong> ${r.location}</p>
+                    <p class="desc">${r.description}</p>
+                </div>
+
+                <span class="status ${r.status === "Pending" ? "pending-status" : "resolved-status"}">
+                    ${r.status}
+                </span>
+            </div>
+        `;
+    });
+</script>
+
+</body>
+</html>
